@@ -12,21 +12,16 @@ console.log(game);
 
 $('.start-button').on('click', function() {
   domUpdates.startGame(game);
-  domUpdates.displayCategoryName(game); 
+  domUpdates.displayCategoryName(game);
+  domUpdates.displayHint(game); 
   domUpdates.hideAnswer(game);
   domUpdates.diplayStartMsg();
   game.setCurrentPlayer();
-  // domUpdates.enableQuit();
   domUpdates.enableButton();
   $('.start-button').hide('');
   $('.button').prop('disabled', false).css('color', 'white');
   $('.player-name-input').hide();
 });
-
-//this is not working properly below
-// $('.quit-button').on('click', function() {
-//   domUpdates.disableQuit();
-// });
 
 $('.quit-button').on('click', function() {
   location.reload(true);
@@ -34,6 +29,8 @@ $('.quit-button').on('click', function() {
 
 $('#js-spin-button').on('click', function() {
   game.wheel.getRandomWheel(game);
+  game.getPrize();
+
 });
 
 $('#js-solve-button').on('click', function(e) {
