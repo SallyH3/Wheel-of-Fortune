@@ -13,7 +13,6 @@ class Wheel {
     this.currentSpin = random;
     if (this.currentSpin === 'LOSE A TURN') {
       domUpdates.displayLoseTurn(this);
-      debugger
       game.switchPlayers();
     }
     if (this.currentSpin === 'BANKRUPT') {

@@ -107,7 +107,7 @@ let domUpdates = {
   },
 
   changeActivePlayer() {
-    $('.player-box').css('border', '1px solid red');
+    $('.player-box').css('border', '1px solid #add8e6');
   },
 
   displayWrongAnswerMessage() {
@@ -116,7 +116,6 @@ let domUpdates = {
 
   displayGuessedLetters(puzzle) {
     $('.guessed-letter').text(`${puzzle.guessedBank}`);
-
   },
 }
 
