@@ -68,7 +68,7 @@ let domUpdates = {
 
   displayScore(game) {
     game.players.forEach((player, index) => {
-      $(`.js-points-${index + 1}`).text(player.roundScore);
+      $(`.js-points-${index + 1}`).text(player.totalScore);
     })
   },
 
@@ -88,8 +88,16 @@ let domUpdates = {
     $('.gameplay-message').text('You did not buy a vowel yet. Please enter a normal letter');
   },
 
+  displayNoMoneyMessage() {
+    $('.gameplay-message').text('Sorry, you don\'t have enough money to buy a vowel.');
+  },
+
   hideVowelInput() {
     $('.vowel-container').addClass('hidden')
+  },
+
+  displayVowelInput() {
+    $('.vowel-container').removeClass('hidden');
   },
 
   grabVowel() {

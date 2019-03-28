@@ -19,7 +19,7 @@ describe('Player', function() {
   
   it('should have default properties', function() {
     expect(player.name).to.equal(player.name);
-    player.roundScore = 0;
+    player.totalScore = 0;
     player.totalScore = 0;
   })
 

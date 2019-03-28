@@ -61,6 +61,10 @@ $('#js-submit-button').on('click', function(e) {
 $('.exit-solve').on('click', function(e) {
   e.preventDefault();
   domUpdates.hidePopup();
-  // game.getNextRoundPuzzle();
-  // domUpdates.hideAnswer(game);
+});
+
+$('#js-buy-vowel-button').on('click', function() {
+  // domUpdates.displayVowelInput();
+  console.log('test')
+  game.currentPlayer.buyVowel(game);
 });
