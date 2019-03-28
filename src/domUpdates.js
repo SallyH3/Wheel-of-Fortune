@@ -1,4 +1,3 @@
-// import Game from './Game.js';
 import Wheel from './Wheel.js';
 import Puzzle from './Puzzle.js';
 import Player from './Player.js';
@@ -28,12 +27,6 @@ let domUpdates = {
   enableButton() {
     $('#js-e-button').remove('disabled');
     $('#js-spin-button').remove('disabled');
-  },
-
-  enableQuit() {
-    $('.quit-button').on('click', function() {
-      location.reload(true);
-    });
   },
 
   displayName() {
@@ -66,7 +59,6 @@ let domUpdates = {
 
   displayScore(game) {
     game.players.forEach((player, index) => {
-      console.log('index:', index + 1, 'player.roundScore', player.roundScore)
       $(`.js-points-${index + 1}`).text(player.roundScore);
     })
   },
@@ -76,7 +68,7 @@ let domUpdates = {
   },
 
   displayLetterMatch(letter) {
-    $('.letter:contains("'+letter+'")').css('color', 'white' );
+    $('.letter:contains("' + letter + '")').css('color', 'white' );
   },
 
   diplayStartMsg() {
@@ -107,10 +99,11 @@ let domUpdates = {
   },
 
   displayWheelValue(wheel) {
-    $('.gameplay-message').text(`The current value of your wheel spin is ${wheel.currentSpin}`)
+    $('.gameplay-message').text
+    (`The current value of your wheel spin is ${wheel.currentSpin}`)
   },
 
- changeActivePlayer() {
+  changeActivePlayer() {
     $('.player-box').css('border', '1px solid red');
   },
 

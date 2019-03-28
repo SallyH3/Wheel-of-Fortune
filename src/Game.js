@@ -19,7 +19,6 @@ class Game {
     let wheel = new Wheel();
     this.currentPrize = wheel.getRandomWheel();
     this.wheel = wheel;
-    console.log('prize!', this.currentPrize);
   } 
 
   beginGame() {
@@ -62,17 +61,9 @@ class Game {
     } else if (this.currentPlayer === this.players[2]) {
       this.currentPlayer = this.players[0];
     }
-      domUpdates.changeActivePlayer();
+    domUpdates.changeActivePlayer();
 
   }
-
-  // getRound() {
-
-  // }
-
-  // getWinner() {
-    
-  // }
 }
 
 export default Game;

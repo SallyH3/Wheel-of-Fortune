@@ -12,9 +12,9 @@ class Puzzle {
 
   checkForVowel(letterInput, game) {
     let vowels = 'aeiou'.toUpperCase().split('');
-     if (vowels.includes(letterInput)) {
-        domUpdates.displayVowelMessage();
-      } else {
+    if (vowels.includes(letterInput)) {
+      domUpdates.displayVowelMessage();
+    } else {
       this.checkUserGuess(letterInput, game);      
     }
   }

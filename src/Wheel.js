@@ -16,9 +16,9 @@ class Wheel {
       game.switchPlayers();
     }
     if (this.currentSpin === 'BANKRUPT') {
-      game.currentPlayer.roundScore === 0;
+      // game.currentPlayer.roundScore === 0;
       domUpdates.displayBankrupt();
-      game.switchPlayers();
+      // game.switchPlayers();
     } 
     else {
       domUpdates.displayWheelValue(this);
