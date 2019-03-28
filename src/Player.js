@@ -17,8 +17,8 @@ class Player {
       this.getPlayerScore(game);
     } else {
       //add a message that indicates they got it wrong, too.
-        game.switchPlayers();
-      }
+      game.switchPlayers();
+    }
   }
 
   getPlayerScore(game) {
