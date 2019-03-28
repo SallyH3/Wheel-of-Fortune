@@ -27,7 +27,7 @@
       <article class='answer-display'></article>
     </article>
   </section>
-    <section class='guessed-letters'></section>
+    <section class='guessed-letters-container'>Guessed Letters: <span class='guessed-letter'> </span></section>
     <section class='guess-input-container'>
       <section class='vowel-container hidden'>
         <label class='vowel-label'>Enter vowel here: </label>
@@ -35,7 +35,7 @@
       </section>
       <section class='cons-container'>
         <label class='cons-label'>Enter letter here: </label>
-        <input class='input' id='js-cons-input' placeholder='input letter here'><button class='submit' id='js-submit-button'>Submit</button>
+        <input class='input' id='js-cons-input' placeholder='input letter here' maxlength='1'><button class='submit' id='js-submit-button'>Submit</button>
       </section>
     </section>
     <section class='message-container'>

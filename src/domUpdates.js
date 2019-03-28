@@ -39,6 +39,10 @@ let domUpdates = {
     $('.category').text(game.currentPuzzle.category.toUpperCase());
   },
 
+  displayHint(game) {
+    $('.hint').text(game.currentPuzzle.description.toUpperCase());
+  },
+
   startGame(game) {
     game.createPlayer($('.player-name-input').eq(0).val(), 
       $('.player-name-input').eq(1).val(), 
@@ -76,7 +80,7 @@ let domUpdates = {
   },
 
   displayVowelMessage() {
-    $('.gameplay-message').text('You haven/t bought a vowel yet. Please enter a non-vowel letter');
+    $('.gameplay-message').text('You did not buy a vowel yet. Please enter a normal letter');
   },
 
   hideVowelInput() {
@@ -112,7 +116,7 @@ let domUpdates = {
   },
 
   displayGuessedLetters(puzzle) {
-    $('.guessed-letters').text(`${puzzle.guessedBank}`);
+    $('.guessed-letter').text(`${puzzle.guessedBank}`);
 
   },
 }

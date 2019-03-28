@@ -12,7 +12,8 @@ console.log(game);
 
 $('.start-button').on('click', function() {
   domUpdates.startGame(game);
-  domUpdates.displayCategoryName(game); 
+  domUpdates.displayCategoryName(game);
+  domUpdates.displayHint(game); 
   domUpdates.hideAnswer(game);
   domUpdates.diplayStartMsg();
   game.setCurrentPlayer();
