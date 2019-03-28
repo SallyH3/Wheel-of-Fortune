@@ -16,7 +16,7 @@ $('.start-button').on('click', function() {
   domUpdates.hideAnswer(game);
   domUpdates.diplayStartMsg();
   game.setCurrentPlayer();
-  domUpdates.enableQuit();
+  // domUpdates.enableQuit();
   domUpdates.enableButton();
   $('.start-button').hide('');
   $('.button').prop('disabled', false).css('color', 'white');
@@ -24,9 +24,9 @@ $('.start-button').on('click', function() {
 });
 
 //this is not working properly below
-$('.quit-button').on('click', function() {
-  domUpdates.disableQuit();
-});
+// $('.quit-button').on('click', function() {
+//   domUpdates.disableQuit();
+// });
 
 $('.quit-button').on('click', function() {
   location.reload(true);
@@ -46,7 +46,7 @@ $('.answer-submit').on('click', function(e) {
   e.preventDefault();
   game.currentPlayer.solvePuzzle(game);
   domUpdates.displayScore(game);
-  console.log('winner current player', game.currentPlayer);
+  console.log('answer correct round over', game.currentPlayer);
 });
 
 $('#js-submit-button').on('click', function(e) {

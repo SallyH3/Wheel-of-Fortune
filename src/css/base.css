@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  outline: none;
 }
 
 body {
@@ -13,7 +12,6 @@ header {
   justify-content: space-around;
   justify-content: center;
 }
-
 
 h1 {
   color: #FFF;
@@ -31,11 +29,11 @@ h1 {
 
 .round-count {
   color: #80c69d;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   letter-spacing: 5px;
   margin-bottom: 40px;
-  margin-top: 0px;
+  margin-top: 50px;
 }
 
 .puzzle-container {
@@ -45,14 +43,14 @@ h1 {
 
 .category {
   color: #6ab187;
-  font-size: 40px;
+  font-size: 55px;
   margin: 65px;
   text-align: center;
 }
 
 .guessed-letters {
   font-size: 55px;
-  color: red;
+  color: #7edfe6;
 }
 
 .consonant-letter-bank,
@@ -64,8 +62,6 @@ h1 {
   letter-spacing: 65px;
   padding: 10px;
 }
-
-
 
 .consonant-letter-bank {
   margin-bottom: 20px;
@@ -102,8 +98,8 @@ h1 {
 }
 
 .player-buttons-container {
-display: flex;
-justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .guess-input-container {
@@ -111,16 +107,17 @@ justify-content: center;
   justify-content: center;
   color: #fff;
   font-size: 24px;
+  margin-top: 50px;
 }
 
 .vowel-container,
 .cons-container {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .vowel-label,
 .cons-label {
-  font-size: 30px;
+  font-size: 35px;
   margin-right: 20px;
 }
 
@@ -132,8 +129,8 @@ justify-content: center;
   border-right: none;
   border-radius: 5px 0px 0px 5px;
   font-size: 24px;
-  line-height: 41px;
-  padding: 6px;
+  line-height: 50px;
+  padding: 10px;
 }
 
 .submit {
@@ -141,7 +138,7 @@ justify-content: center;
   border-radius: 0px 5px 5px 0px;
   font-size: 24px;
   margin-right: 20px;
-  line-height: 50px;
+  line-height: 70px;
   width: 100px;
 }
 
@@ -149,11 +146,11 @@ justify-content: center;
   background-color: #34675c;
   border: #FFF 1.5px solid;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px black;
-  color: grey;
+  box-shadow: 5px 5px 5px #000;
+  color: #707070;
   cursor: pointer;
   font-size: 35px;
-  margin: 20px;
+  margin: 40px;
   width: 200px;
   height: 100px;
  }
@@ -165,9 +162,9 @@ justify-content: center;
 
  .question-popup {
   background: #FFF;
-  border: 2px solid black;
+  border: 2px solid #000;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px #000;
   height: 375px;
   width: 750px;
   margin-top: 100px;
@@ -183,17 +180,17 @@ justify-content: center;
 
 .answer-message {
   font-size: 30px;
-  color: black;
+  color: #000;
 }
 
  .answer-submit {
   background-color: #34675c;
-  color: black;
+  color: #000;
   font-size: 24px;
  }
 
  .answer-input {
-  color: black;
+  color: #000;
  }
 
 .message-container {
@@ -204,9 +201,9 @@ justify-content: center;
  }
 
  .gameplay-message {
-    color: #7fffe6;
-    font-size: 40px;
-    margin: 60px;
+  color: #7fffe6;
+  font-size: 45px;
+  margin: 60px;
  }
 
  .player-form {
@@ -217,16 +214,16 @@ justify-content: center;
 
 .player-name-input {
   font-size: 24px;
-   margin-top: 10px;
-   line-height: 35px;
-   padding: 5px;
-   border-radius: 5px;
+  margin-top: 10px;
+  line-height: 35px;
+  padding: 5px;
+  border-radius: 5px;
  }
  
  .player-box {
   border: #FFF 1.5px solid;
   border-radius: 5px;
-  box-shadow: 5px 5px 5px black;
+  box-shadow: 5px 5px 5px #000;
   color: #FFF;
   display: flex;
   flex-direction: column;
@@ -234,27 +231,31 @@ justify-content: center;
   margin: 15px;
   padding: 20px;
   width: 400px;
-  height: 175px
+  height: 220px;
+ }
+
+ .box-name {
+  font-size: 45px;
  }
 
  .score-label {
-  color: red;
+  color: #FFF;
   font-size: 32px;
   margin-top: 10px;
  }
 
  .start-container {
-   display: flex;
-   justify-content: center;
+  display: flex;
+  justify-content: center;
  }
 
  .start-button {
-   font-size: 60px;
-   height: 200px;
-   width: 740px;
-   color: #FFF;
+  font-size: 60px;
+  height: 200px;
+  width: 740px;
+  color: #FFF;
  }
 
  .start-button:hover {
-   background-color: lightblue;
+  background-color: lightblue;
  }
