@@ -40,7 +40,7 @@ const data = {
           number_of_words: 1,
           total_number_of_letters: 8,
           first_word: 8, 
-          description:'Location or object(s) found within a typical house.',
+          description: 'Location or object(s) found within a typical house.',
           correct_answer: 'Armchair',
         },
         {  
