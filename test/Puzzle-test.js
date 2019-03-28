@@ -26,5 +26,5 @@ describe('Puzzle', function() {
   it('should be an instance of Puzzle', function() {
 
     expect(puzzle).to.be.an.instanceof(Puzzle);
-    });
   });
+});

@@ -42,6 +42,12 @@ describe('Game', function() {
 
   it('should switch players', function() {
     game.switchPlayers();
-    expect(game.currentPlayer).to.equal(game.players[0], game.players[1], game.players[2]);
+    expect(game.currentPlayer)
+      .to.equal(game.players[0], game.players[1], game.players[2]);
+  });
+
+  it('should be an instance of game', function() {
+
+    expect(game).to.be.an.instanceof(Game);
   });
 })
