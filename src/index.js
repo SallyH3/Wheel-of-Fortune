@@ -61,4 +61,5 @@ $('#js-submit-button').on('click', function(e) {
 $('.exit-solve').on('click', function(e) {
   e.preventDefault();
   domUpdates.hidePopup();
+  game.getNextRoundPuzzle();
 })

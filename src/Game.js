@@ -40,6 +40,13 @@ class Game {
     this.currentPuzzle = currentPuzzle;
   }
 
+  getNextRoundPuzzle() {
+    this.currentRound ++;
+    console.log('test', this.currentPuzzle);
+    this.beginGame();
+    domUpdates.removeSolvedAnswer();
+  }
+
   createPlayer(name1, name2, name3) {
     const player1 = new Player(name1);
     const player2 = new Player(name2);
@@ -62,7 +69,6 @@ class Game {
     } else if (this.currentPlayer === this.players[2]) {
       this.currentPlayer = this.players[0];
     }
-    console.log(this.currentPlayers);
     domUpdates.changeActivePlayer();
 
   }
