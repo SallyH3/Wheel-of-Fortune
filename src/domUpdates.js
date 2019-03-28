@@ -24,6 +24,11 @@ let domUpdates = {
     })
   },
 
+  removeSolvedAnswer() {
+    $('.answer-display').remove();
+    this.hideAnswer();
+  },
+
   enableButton() {
     $('#js-e-button').remove('disabled');
     $('#js-spin-button').remove('disabled');

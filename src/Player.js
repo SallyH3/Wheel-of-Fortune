@@ -8,19 +8,19 @@ class Player {
     this.roundScore = roundScore;
     this.totalScore = totalScore;
   }
-  
+
   getPlayerScore(game) {
     game.currentPlayer.roundScore += game.currentPrize;
     domUpdates.displayScore(game);
   }
 
   // buyVowel() {
-  //   if(this.score > 100) {
+  //   if(game.currentPlayer.rouncScore > 100) {
   //     buy vowel becomes enabled
   //     dom updates to show enabled
   //     game.currentPlayer = this.totalScore - 100
   //     when enabled, player can enter in 1 vowel and if it's in the letter if will show up on the puzzle bank
-  //   if(this.score <100) {
+  //   if(game.currentPlayer.rouncScore <100) {
   //     domUpdates display not enough cash message
   //     buy vowel is still disabled
   //   }

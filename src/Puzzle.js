@@ -29,7 +29,7 @@ class Puzzle {
         domUpdates.displayLetterMatch(letterInput);
         this.guessedBank.push(letterInput);
         this.guessedBank = [...new Set(this.guessedBank)];
-        // player.currentPlayer.getPlayerScore(game);
+        game.currentPlayer.getPlayerScore(game);
         domUpdates.displayGuessedLetters(this);
 
         foundMatch = true;
@@ -45,6 +45,7 @@ class Puzzle {
     if (solveInput === answer) {
       domUpdates.displayWinMessage();
       game.currentPlayer.getPlayerScore(game);
+      game.getNextRoundPuzzle();
     } else {
       domUpdates.displayWrongAnswerMessage();
       //add a message that indicates they got it wrong, too.
