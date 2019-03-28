@@ -15,7 +15,8 @@ class Puzzle {
      if (vowels.includes(letterInput)) {
         domUpdates.displayVowelMessage();
       } else {
-      this.checkUserGuess(letterInput, game);      }
+      this.checkUserGuess(letterInput, game);      
+    }
   }
 
   checkUserGuess(letterInput, game) {

@@ -87,6 +87,10 @@ let domUpdates = {
     $('.gameplay-message').text('You haven/t bought a vowel yet. Please enter a non-vowel letter');
   },
 
+  hideVowelInput() {
+    $('.vowel-container').addClass('hidden')
+  },
+
   grabVowel() {
     let currentVowel = ($('#js-vowel-input').val().toUpperCase());
     return currentVowel;
