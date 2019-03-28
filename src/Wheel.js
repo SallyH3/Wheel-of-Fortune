@@ -12,7 +12,7 @@ class Wheel {
     let random = data.wheel[Math.floor(Math.random() * data.wheel.length)];
     this.currentSpin = random;
     if (this.currentSpin === 'LOSE A TURN') {
-      domUpdates.displayLoseTurn(this);
+      domUpdates.displayLoseTurn();
       game.switchPlayers();
     }
     if (this.currentSpin === 'BANKRUPT') {

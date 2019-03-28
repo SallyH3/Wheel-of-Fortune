@@ -105,18 +105,20 @@ let domUpdates = {
     return currentVowel;
   },
 
-
-  displayLoseTurn(wheel) {
+  displayLoseTurn() {
     $('.gameplay-message').text('Your spin was LOSE A TURN, onto the next player');
   },
 
   displayBankrupt() {
-    $('.gameplay-message').text('Your spin was BANKRUPT, onto the next player')
-
+    $('.gameplay-message').text('Your spin was BANKRUPT, onto the next player');
   },
 
   displayWheelValue(wheel) {
     $('.gameplay-message').text(`The current value of your wheel spin is ${wheel.currentSpin}`)
+  },
+
+  displayBuyVowelMessage() {
+    $('.gameplay-message').text('Please enter a vowel.');
   },
 
   changeActivePlayer() {
