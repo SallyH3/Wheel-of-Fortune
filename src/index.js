@@ -33,7 +33,7 @@ $('.quit-button').on('click', function() {
 });
 
 $('#js-spin-button').on('click', function() {
-  game.wheel.getRandomWheel();
+  game.wheel.getRandomWheel(game);
 });
 
 $('#js-solve-button').on('click', function(e) {

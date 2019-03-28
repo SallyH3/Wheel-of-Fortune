@@ -9,18 +9,16 @@ class Wheel {
     this.currentIndex = [];
   }
 
-  getRandomWheel(player, game) {
+  getRandomWheel(game) {
     let random = data.wheel[Math.floor(Math.random() * data.wheel.length)];
-    console.log('random wheel value: ', random);
     this.currentIndex = random;
     console.log('curr wheel spin:', this.currentIndex)
     if (random === 'LOSE A TURN') {
       domUpdates.displayLoseTurn(this);
-      // iterates to next player
+      game.switchPlayers();
     }
     if (this.currentIndex === 'BANKRUPT') {
-        // iterates to next player
-        // player.roundScore === 0;
+        game.currentPlayer.roundScore === 0;
         domUpdates.displayBankrupt();
         game.switchPlayers();
       } 
