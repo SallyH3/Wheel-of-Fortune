@@ -21,8 +21,7 @@ npm install
 ![full-players](https://user-images.githubusercontent.com/40863560/55130036-0565d680-50df-11e9-8f43-933ccc512298.png)
 
 
-![spin-value-full](https://user-images.githubusercontent.com/40863560/55130047-0b5bb780-50df-11e9-9f2e-8a9b3a564e97.png)
-
+[![localhost-8080.png](https://i.postimg.cc/Wbr9VCy0/localhost-8080.png)](https://postimg.cc/tYqdtSpg)
 
 ### Learning goals
 
