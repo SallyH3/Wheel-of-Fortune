@@ -19,6 +19,7 @@ class Game {
     let wheel = new Wheel();
     this.currentPrize = wheel.getRandomWheel();
     this.wheel = wheel;
+    console.log('Wheel', this.currentPrize)
   } 
 
   beginGame() {
