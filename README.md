@@ -18,7 +18,10 @@ npm install
 
 ### Screenshots of project:
 
-photos here
+![full-players](https://user-images.githubusercontent.com/40863560/55130036-0565d680-50df-11e9-8f43-933ccc512298.png)
+
+
+![spin-value-full](https://user-images.githubusercontent.com/40863560/55130047-0b5bb780-50df-11e9-9f2e-8a9b3a564e97.png)
 
 
 ### Learning goals
@@ -41,7 +44,9 @@ We worked on this project in order to become more familiar with jQuery, Object O
 
 ### Tooling used for organization:
 
-https://trello.com/b/uY6S7F4R/bridgett-sally-wheel-of-fortune
+* gitHub issues
+
+* [Trello](https://trello.com/b/uY6S7F4R/bridgett-sally-wheel-of-fortune)
 
 ### Contributors
 
