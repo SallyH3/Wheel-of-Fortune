@@ -17,7 +17,7 @@ describe('Wheel', function() {
   
   it('should have default properties', function() {
     expect(wheel.values).to.deep.equal([]);
-    expect(wheel.currentIndex).to.deep.equal([]);
+    expect(wheel.currentSpin).to.deep.equal([]);
   })
 
   it('should be an instance of wheel', function() {

@@ -107,7 +107,7 @@ let domUpdates = {
   },
 
   displayWheelValue(wheel) {
-    $('.gameplay-message').text(`The current value of your wheel spin is ${wheel.currentIndex}`)
+    $('.gameplay-message').text(`The current value of your wheel spin is ${wheel.currentSpin}`)
   },
 
  changeActivePlayer() {

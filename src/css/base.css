@@ -51,7 +51,7 @@ h1 {
 
 .guessed-letters {
   font-size: 55px;
-  color: red;
+  color: #7edfe6;
 }
 
 .consonant-letter-bank,
@@ -234,11 +234,15 @@ justify-content: center;
   margin: 15px;
   padding: 20px;
   width: 400px;
-  height: 175px
+  height: 220px;
+ }
+
+ .box-name {
+   font-size: 45px;
  }
 
  .score-label {
-  color: red;
+  color: #FFF;
   font-size: 32px;
   margin-top: 10px;
  }
