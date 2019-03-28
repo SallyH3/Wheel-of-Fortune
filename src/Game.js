@@ -62,7 +62,8 @@ class Game {
     } else if (this.currentPlayer === this.players[2]) {
       this.currentPlayer = this.players[0];
     }
-    domUpdates.changeActivePlayer();
+      domUpdates.changeActivePlayer();
+
   }
 
   // getRound() {
