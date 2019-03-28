@@ -14,6 +14,7 @@ let domUpdates = {
   },
 
   hideAnswer(game) {
+    this.removeSolvedAnswer();
     let answer = game.currentPuzzle.answer.split('');
     answer.forEach((letter) => {
       if (letter === ' ' || '-' || '&') {
@@ -24,9 +25,8 @@ let domUpdates = {
     })
   },
 
-  removeSolvedAnswer() {
-    $('.answer-display').remove();
-    this.hideAnswer();
+  removeSolvedAnswer: () => {
+    $('.answer-display').empty();
   },
 
   enableButton() {
