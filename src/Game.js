@@ -62,6 +62,7 @@ class Game {
     } else if (this.currentPlayer === this.players[2]) {
       this.currentPlayer = this.players[0];
     }
+    console.log(this.currentPlayers);
     domUpdates.changeActivePlayer();
 
   }

@@ -41,7 +41,7 @@ $('#js-solve-button').on('click', function(e) {
 
 $('.answer-submit').on('click', function(e) {
   e.preventDefault();
-  game.currentPlayer.solvePuzzle(game);
+  game.currentPuzzle.solvePuzzle(game);
   domUpdates.displayScore(game);
   console.log('answer correct round over', game.currentPlayer);
 });

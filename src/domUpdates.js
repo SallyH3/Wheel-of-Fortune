@@ -56,7 +56,7 @@ let domUpdates = {
     return currentLetter;
   },
 
-  grabAnswerInput(player) {
+  grabAnswerInput(puzzle) {
     let answerInput = ($('.answer-input').val().toUpperCase());
     return answerInput;
   },

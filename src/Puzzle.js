@@ -1,5 +1,7 @@
 import Game from './Game.js';
+import Player from './Player.js';
 import domUpdates from './domUpdates.js';
+import Wheel from './Wheel.js';
 
 class Puzzle {
   constructor(puzzle) {
@@ -27,7 +29,9 @@ class Puzzle {
         domUpdates.displayLetterMatch(letterInput);
         this.guessedBank.push(letterInput);
         this.guessedBank = [...new Set(this.guessedBank)];
+        // player.currentPlayer.getPlayerScore(game);
         domUpdates.displayGuessedLetters(this);
+
         foundMatch = true;
       }
     });
@@ -35,6 +39,19 @@ class Puzzle {
       game.switchPlayers();
     }
   }
+  solvePuzzle(game) {
+    let solveInput = domUpdates.grabAnswerInput(this);
+    let answer = game.currentPuzzle.answer.toUpperCase();
+    if (solveInput === answer) {
+      domUpdates.displayWinMessage();
+      game.currentPlayer.getPlayerScore(game);
+    } else {
+      domUpdates.displayWrongAnswerMessage();
+      //add a message that indicates they got it wrong, too.
+      game.switchPlayers();
+    }
+  }
+
 
 }
 
