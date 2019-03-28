@@ -45,7 +45,7 @@ let domUpdates = {
   },
 
   displayHint(game) {
-    $('.hint').text(game.currentPuzzle.description.toUpperCase());
+    $('.hint').text(game.currentPuzzle.description);
   },
 
   startGame(game) {
