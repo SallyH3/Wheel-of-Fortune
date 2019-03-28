@@ -26,6 +26,7 @@ class Game {
     this.getRandomPuzzle();
     let puzzle1 = new Puzzle(this.currentPuzzle);
     this.currentPuzzle = puzzle1;
+    domUpdates.hideAnswer(this);
   }
 
   getRandomPuzzle() {
@@ -44,7 +45,9 @@ class Game {
     this.currentRound ++;
     console.log('test', this.currentPuzzle);
     this.beginGame();
-    domUpdates.removeSolvedAnswer();
+    console.log('YOOOOOOOOO', domUpdates.hideAnswer(this));
+    
+    // domUpdates.removeSolvedAnswer();
   }
 
   createPlayer(name1, name2, name3) {

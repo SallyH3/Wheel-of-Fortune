@@ -14,7 +14,6 @@ $('.start-button').on('click', function() {
   domUpdates.startGame(game);
   domUpdates.displayCategoryName(game);
   domUpdates.displayHint(game); 
-  domUpdates.hideAnswer(game);
   domUpdates.diplayStartMsg();
   game.setCurrentPlayer();
   domUpdates.enableButton();
@@ -41,6 +40,7 @@ $('#js-solve-button').on('click', function(e) {
 
 $('.answer-submit').on('click', function(e) {
   e.preventDefault();
+  // domUpdates.removeSolvedAnswer();
   game.currentPuzzle.solvePuzzle(game);
   domUpdates.displayScore(game);
   console.log('answer correct round over', game.currentPlayer);
@@ -61,5 +61,6 @@ $('#js-submit-button').on('click', function(e) {
 $('.exit-solve').on('click', function(e) {
   e.preventDefault();
   domUpdates.hidePopup();
-  game.getNextRoundPuzzle();
-})
+  // game.getNextRoundPuzzle();
+  // domUpdates.hideAnswer(game);
+});
