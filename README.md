@@ -47,6 +47,10 @@ We worked on this project in order to become more familiar with jQuery, Object O
 
 * [Trello](https://trello.com/b/uY6S7F4R/bridgett-sally-wheel-of-fortune)
 
+### DTR for members:
+
+[Define The Relationship](https://gist.github.com/SallyHaefling/9f2699192a5c1d000665034a2f093c95)
+
 ### Contributors
 
 Sally Haefling
