@@ -8,19 +8,7 @@ class Player {
     this.roundScore = roundScore;
     this.totalScore = totalScore;
   }
-
-  solvePuzzle(game) {
-    let solveInput = domUpdates.grabAnswerInput(this);
-    let answer = game.currentPuzzle.answer.toUpperCase();
-    if (solveInput === answer) {
-      domUpdates.displayWinMessage();
-      this.getPlayerScore(game);
-    } else {
-      //add a message that indicates they got it wrong, too.
-      game.switchPlayers();
-    }
-  }
-
+  
   getPlayerScore(game) {
     game.currentPlayer.roundScore += game.currentPrize;
     domUpdates.displayScore(game);
