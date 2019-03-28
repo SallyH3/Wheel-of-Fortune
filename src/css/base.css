@@ -1,6 +1,5 @@
 * {
   box-sizing: border-box;
-  outline: none;
 }
 
 body {
@@ -35,7 +34,7 @@ h1 {
   text-align: center;
   letter-spacing: 5px;
   margin-bottom: 40px;
-  margin-top: 0px;
+  margin-top: 50px;
 }
 
 .puzzle-container {
@@ -111,6 +110,7 @@ justify-content: center;
   justify-content: center;
   color: #fff;
   font-size: 24px;
+  margin-top: 50px;
 }
 
 .vowel-container,
