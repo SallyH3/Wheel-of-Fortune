@@ -3,22 +3,28 @@ import data from './data.js';
 import domUpdates from './domUpdates.js';
 
 class Wheel {
-  constructor() {
+  constructor(game) {
     this.values = [];
     this.currentSpin = [];
+    this.game = game;
   }
 
-  getRandomWheel(game) {
+  getRandomWheel() {
     let random = data.wheel[Math.floor(Math.random() * data.wheel.length)];
     this.currentSpin = random;
     if (this.currentSpin === 'LOSE A TURN') {
       domUpdates.displayLoseTurn();
-      game.switchPlayers();
+      console.log(this.game.currentPlayer);
+      this.game.switchPlayers();
+      console.log(this.game.currentPlayer);
     }
     if (this.currentSpin === 'BANKRUPT') {
-      // game.currentPlayer.totalScore === 0;
+      this.game.currentPlayer.totalScore = 0;
+      domUpdates.displayScore(this.game);
+      console.log(this.game.currentPlayer);
       domUpdates.displayBankrupt();
-      // game.switchPlayers();
+      this.game.switchPlayers();
+      console.log(this.game.currentPlayer);
     } 
     else {
       domUpdates.displayWheelValue(this);
