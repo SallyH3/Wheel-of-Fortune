@@ -68,6 +68,6 @@ $('.exit-solve').on('click', function(e) {
 
 $('#js-buy-vowel-button').on('click', function() {
   // domUpdates.displayVowelInput();
-  console.log('test')
+  console.log('current')
   game.currentPlayer.buyVowel(game);
 });
