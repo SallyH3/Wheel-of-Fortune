@@ -26,6 +26,7 @@ class Game {
     let puzzle1 = new Puzzle(this.currentPuzzle);
     this.currentPuzzle = puzzle1;
     domUpdates.displayPuzzleAnswer(this);
+    // this.currentRound++;
   }
 
   getRandomPuzzle() {
@@ -41,7 +42,6 @@ class Game {
   }
 
   getNextRoundPuzzle() {
-    this.currentRound++;
     this.beginGame();
   }
 
