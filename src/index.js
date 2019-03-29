@@ -27,7 +27,7 @@ $('.quit-button').on('click', function() {
 });
 
 $('#js-spin-button').on('click', function() {
-  game.wheel.getRandomWheel(game);
+  game.wheel.getRandomWheel();
   game.getPrize();
 
 });
@@ -66,7 +66,5 @@ $('.exit-solve').on('click', function(e) {
 });
 
 $('#js-buy-vowel-button').on('click', function() {
-  // domUpdates.displayVowelInput();
-  console.log('buy-vowel-button-clicked')
   game.currentPlayer.buyVowel(game);
 });

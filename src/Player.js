@@ -20,7 +20,6 @@ class Player {
     } else { 
       domUpdates.displayVowelInput();
       domUpdates.displayBuyVowelMessage();
-      // domUpdates.displayWheelValue(wheel);
       game.currentPlayer.totalScore -= 100;
       domUpdates.displayScore(game);
     }

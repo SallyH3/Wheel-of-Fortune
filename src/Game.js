@@ -16,7 +16,7 @@ class Game {
   }
 
   getPrize() {
-    let wheel = new Wheel();
+    let wheel = new Wheel(this);
     this.currentPrize = wheel.getRandomWheel();
     this.wheel = wheel;
   } 
@@ -42,9 +42,7 @@ class Game {
 
   getNextRoundPuzzle() {
     this.currentRound++;
-    console.log('test', this.currentPuzzle);
     this.beginGame();
-    // domUpdates.removeSolvedAnswer();
   }
 
   createPlayer(name1, name2, name3) {
