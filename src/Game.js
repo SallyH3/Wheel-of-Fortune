@@ -19,14 +19,13 @@ class Game {
     let wheel = new Wheel();
     this.currentPrize = wheel.getRandomWheel();
     this.wheel = wheel;
-    console.log('Wheel', this.currentPrize)
   } 
 
   beginGame() {
     this.getRandomPuzzle();
     let puzzle1 = new Puzzle(this.currentPuzzle);
     this.currentPuzzle = puzzle1;
-    domUpdates.hideAnswer(this);
+    domUpdates.displayPuzzleAnswer(this);
   }
 
   getRandomPuzzle() {
@@ -42,11 +41,9 @@ class Game {
   }
 
   getNextRoundPuzzle() {
-    this.currentRound ++;
+    this.currentRound++;
     console.log('test', this.currentPuzzle);
     this.beginGame();
-    console.log('YOOOOOOOOO', domUpdates.hideAnswer(this));
-    
     // domUpdates.removeSolvedAnswer();
   }
 

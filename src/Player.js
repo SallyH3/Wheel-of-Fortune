@@ -19,13 +19,10 @@ class Player {
       return domUpdates.displayNoMoneyMessage();
     } else { 
       domUpdates.displayVowelInput();
-      console.log('in buy vowel', game.currentPlayer.totalScore);
       domUpdates.displayBuyVowelMessage();
       // domUpdates.displayWheelValue(wheel);
-      console.log('buyVowel Current Player', game.currentPlayer);
       game.currentPlayer.totalScore -= 100;
       domUpdates.displayScore(game);
-      console.log('buyVowel Current Player AFTER', game.currentPlayer);
     }
   }
 }
