@@ -53,11 +53,11 @@ $('#js-submit-button').on('click', function(e) {
   $('.input').val('');
 });
 
-$('#js-vowel-submit-button').on('click', function () {
-  console.log('inside vowel submit click handle');
+$('#js-vowel-submit-button').on('click', function (e) {
+  e.preventDefault();
   let vowelInput = domUpdates.grabVowel ();
+  game.currentPuzzle.checkVowelGuess(vowelInput, game);
   $('.input').val('');
-  return vowelInput;
 });
 
 $('.exit-solve').on('click', function(e) {
@@ -66,6 +66,5 @@ $('.exit-solve').on('click', function(e) {
 });
 
 $('#js-buy-vowel-button').on('click', function() {
-  console.log('current')
   game.currentPlayer.buyVowel(game);
 });

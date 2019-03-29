@@ -5,6 +5,14 @@ import $ from 'jquery';
 
 let domUpdates = {
 
+  startGame(game) {
+    game.createPlayer($('.player-name-input').eq(0).val(), 
+      $('.player-name-input').eq(1).val(), 
+      $('.player-name-input').eq(2).val());
+    game.beginGame(game);
+    game.getPrize();
+  },
+
   showPopup() {
     $('.popup').removeClass('hidden');
   },
@@ -13,7 +21,7 @@ let domUpdates = {
     $('.popup').addClass('hidden');
   },
 
-  hideAnswer(game) {
+  displayPuzzleAnswer(game) {
     this.removeSolvedAnswer();
     let answer = game.currentPuzzle.answer.split('');
     answer.forEach((letter) => {
@@ -46,14 +54,6 @@ let domUpdates = {
 
   displayHint(game) {
     $('.hint').text(game.currentPuzzle.description);
-  },
-
-  startGame(game) {
-    game.createPlayer($('.player-name-input').eq(0).val(), 
-      $('.player-name-input').eq(1).val(), 
-      $('.player-name-input').eq(2).val());
-    game.beginGame(game);
-    game.getPrize();
   },
 
   grabCurrentLetter(puzzle) {
@@ -96,13 +96,13 @@ let domUpdates = {
     $('.vowel-container').addClass('hidden')
   },
 
-  displayVowelInput() {
-    $('.vowel-container').removeClass('hidden');
-  },
-
-  grabVowel() {
+  grabVowel(puzzle) {
     let currentVowel = ($('#js-vowel-input').val().toUpperCase());
     return currentVowel;
+  },
+
+  displayVowelInput() {
+    $('.vowel-container').removeClass('hidden');
   },
 
   displayLoseTurn() {
@@ -115,6 +115,10 @@ let domUpdates = {
 
   displayWheelValue(wheel) {
     $('.gameplay-message').text(`The current value of your wheel spin is ${wheel.currentSpin}`)
+  },
+
+  displayRoundNum() {
+    $('.round-num').text(`{}`)
   },
 
   displayBuyVowelMessage() {

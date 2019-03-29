@@ -20,10 +20,8 @@ class Player {
     } else { 
       domUpdates.displayVowelInput();
       domUpdates.displayBuyVowelMessage();
-      console.log('buyVowel Current Player', game.currentPlayer);
       game.currentPlayer.totalScore -= 100;
       domUpdates.displayScore(game);
-      console.log('buyVowel Current Player AFTER', game.currentPlayer);
     }
   }
 }

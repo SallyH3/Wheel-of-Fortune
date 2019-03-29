@@ -39,25 +39,23 @@ class Puzzle {
     }
   }
 
-  // checkVowelGuess(vowelInput, game) {
-  //   let vowels = 'aeiou'.toUpperCase().split('');
-  //   let answer = this.answer.toUpperCase().split('');
-  //   let foundMatch = false;
-  //   answer.forEach(vowel => {
-  //     if (vowel === vowelInput) {
-  //       console.log(vowelInput);
-  //       domUpdates.displayLetterMatch(vowelInput);
-  //       this.guessedBank.push(vowelInput);
-  //       this.guessedBank = [...new Set(this.guessedBank)];
-  //       game.currentPlayer.getPlayerScore(game);
-  //       domUpdates.displayGuessedLetters(this);
-  //       foundMatch = true;
-  //     }
-  //   });
-  //   if (!foundMatch) {
-  //     game.switchPlayers();
-  //   }
-  // }
+  checkVowelGuess(vowelInput, game) {
+    let vowels = 'aeiou'.toUpperCase().split('');
+    let answer = this.answer.toUpperCase().split('');
+    let foundMatch = false;
+    answer.forEach(letter => {
+      if (vowels.includes(vowelInput)) {
+        domUpdates.displayLetterMatch(vowelInput);
+        this.guessedBank.push(vowelInput);
+        this.guessedBank = [...new Set(this.guessedBank)];
+        domUpdates.displayGuessedLetters(this);
+        foundMatch = true;
+      }
+    });
+    // if (!foundMatch) {
+    //   game.switchPlayers();
+    // }
+  }
 
   solvePuzzle(game) {
     let solveInput = domUpdates.grabAnswerInput(this);
