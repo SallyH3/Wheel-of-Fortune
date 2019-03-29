@@ -3,28 +3,28 @@ import Puzzle from './Puzzle.js';
 import Wheel from './Wheel.js';
 
 class Player {
-  constructor(name, roundScore = 0, totalScore = 0) {
+  constructor(name, totalScore = 0) {
     this.name = name;
-    this.roundScore = roundScore;
     this.totalScore = totalScore;
   }
 
   getPlayerScore(game) {
-    game.currentPlayer.roundScore += game.currentPrize;
+    game.currentPlayer.totalScore += game.currentPrize;
     domUpdates.displayScore(game);
   }
 
-  // buyVowel() {
-  //   if(game.currentPlayer.rouncScore > 100) {
-  //     buy vowel becomes enabled
-  //     dom updates to show enabled
-  //     game.currentPlayer = this.totalScore - 100
-  //     when enabled, player can enter in 1 vowel and if it's in the letter if will show up on the puzzle bank
-  //   if(game.currentPlayer.rouncScore <100) {
-  //     domUpdates display not enough cash message
-  //     buy vowel is still disabled
-  //   }
-  //   }
+  buyVowel(game) {
+    if (game.currentPlayer.totalScore < 100 ) {
+      domUpdates.hideVowelInput();
+      return domUpdates.displayNoMoneyMessage();
+    } else { 
+      domUpdates.displayVowelInput();
+      console.log('in buy vowel', game.currentPlayer.totalScore);
+      domUpdates.displayBuyVowelMessage();
+      // domUpdates.displayWheelValue(wheel);
+      game.currentPlayer.totalScore -= 100;
+    }
+  }
 }
 
 

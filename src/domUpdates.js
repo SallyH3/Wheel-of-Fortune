@@ -45,7 +45,7 @@ let domUpdates = {
   },
 
   displayHint(game) {
-    $('.hint').text(game.currentPuzzle.description.toUpperCase());
+    $('.hint').text(game.currentPuzzle.description);
   },
 
   startGame(game) {
@@ -68,7 +68,7 @@ let domUpdates = {
 
   displayScore(game) {
     game.players.forEach((player, index) => {
-      $(`.js-points-${index + 1}`).text(player.roundScore);
+      $(`.js-points-${index + 1}`).text(player.totalScore);
     })
   },
 
@@ -88,8 +88,16 @@ let domUpdates = {
     $('.gameplay-message').text('You did not buy a vowel yet. Please enter a normal letter');
   },
 
+  displayNoMoneyMessage() {
+    $('.gameplay-message').text('Sorry, you don\'t have enough money to buy a vowel.');
+  },
+
   hideVowelInput() {
     $('.vowel-container').addClass('hidden')
+  },
+
+  displayVowelInput() {
+    $('.vowel-container').removeClass('hidden');
   },
 
   grabVowel() {
@@ -97,18 +105,20 @@ let domUpdates = {
     return currentVowel;
   },
 
-
-  displayLoseTurn(wheel) {
+  displayLoseTurn() {
     $('.gameplay-message').text('Your spin was LOSE A TURN, onto the next player');
   },
 
   displayBankrupt() {
-    $('.gameplay-message').text('Your spin was BANKRUPT, onto the next player')
-
+    $('.gameplay-message').text('Your spin was BANKRUPT, onto the next player');
   },
 
   displayWheelValue(wheel) {
     $('.gameplay-message').text(`The current value of your wheel spin is ${wheel.currentSpin}`)
+  },
+
+  displayBuyVowelMessage() {
+    $('.gameplay-message').text('Please enter a vowel.');
   },
 
   changeActivePlayer() {
