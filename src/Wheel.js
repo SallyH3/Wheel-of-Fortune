@@ -14,17 +14,13 @@ class Wheel {
     this.currentSpin = random;
     if (this.currentSpin === 'LOSE A TURN') {
       domUpdates.displayLoseTurn();
-      console.log(this.game.currentPlayer);
       this.game.switchPlayers();
-      console.log(this.game.currentPlayer);
     }
     if (this.currentSpin === 'BANKRUPT') {
       this.game.currentPlayer.totalScore = 0;
       domUpdates.displayScore(this.game);
-      console.log(this.game.currentPlayer);
       domUpdates.displayBankrupt();
       this.game.switchPlayers();
-      console.log(this.game.currentPlayer);
     } 
     else {
       domUpdates.displayWheelValue(this);

@@ -57,6 +57,7 @@ $('#js-vowel-submit-button').on('click', function (e) {
   e.preventDefault();
   let vowelInput = domUpdates.grabVowel ();
   game.currentPuzzle.checkVowelGuess(vowelInput, game);
+  domUpdates.hideVowelInput();
   $('.input').val('');
 });
 
@@ -68,3 +69,5 @@ $('.exit-solve').on('click', function(e) {
 $('#js-buy-vowel-button').on('click', function() {
   game.currentPlayer.buyVowel(game);
 });
+
+$()

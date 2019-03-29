@@ -117,9 +117,9 @@ let domUpdates = {
     $('.gameplay-message').text(`The current value of your wheel spin is ${wheel.currentSpin}`)
   },
 
-  displayRoundNum() {
-    $('.round-num').text(`{}`)
-  },
+  // displayRoundNum() {
+  //   $('.round-num').text(`{game.currentRound}`)
+  // },
 
   displayBuyVowelMessage() {
     $('.gameplay-message').text('Please enter a vowel.');
