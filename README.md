@@ -53,7 +53,7 @@ We worked on this project in order to become more familiar with jQuery, Object O
 
 ### Contributors
 
-Sally Haefling
+[Sally H](https://github.com/SallyH3)
 
 [Bridgett Coyle](https://github.com/B-Coyle)
 
